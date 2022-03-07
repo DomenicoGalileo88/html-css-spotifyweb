@@ -132,6 +132,10 @@ a:hover {
   margin: 2rem;
 }
 
+.mt_mezzo{
+    margin: 0.5rem
+}
+
 .mt_1 {
   margin-top: 1rem;
 }
@@ -158,6 +162,10 @@ a:hover {
 
 .mb_1 {
   margin-bottom: 1rem;
+}
+
+.mb_2 {
+  margin-bottom: 2rem;
 }
 
 .mr_35 {
@@ -415,14 +423,28 @@ a:hover {
   display: inline-block;
 }
 
+.content_music .recently_played{
+    display: flex;
+    column-gap: 1rem;
+
+}
 
 .content_music .img_played {
     width: calc(100% / 6);
+    text-align: center;
 }
 
 .content_music .img_played img{
     width: 100%;
 }
+
+.content_music .img_played .subtitle{
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+
 
 /* #endregion Content Music */
 
