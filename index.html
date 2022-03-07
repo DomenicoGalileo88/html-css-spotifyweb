@@ -12,44 +12,99 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/basic_structure.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/basic_structure.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="debug">
-
+  <body class="">
     <main id="site_main" class="clearfix">
-
-        <header class="main_header">
-            <div class="main_header_left">
-                <img src="./img/logo-small.svg" alt="logo_spotify">
-
-            </div>
-            <div class="main_header_right"></div>
-           
-
-        </header>
-        <!-- /.main_header -->
-        <aside class="sidebar">
-          
-        </aside>
-        <!-- /.sidebar -->
-        <div class="content_music">
-           
+      <header class="main_header">
+        <div class="main_header_left flex">
+          <img src="./img/logo-small.svg" alt="logo_spotify" />
+          <span class="title_logo">Spotify</span>
         </div>
-        <!-- /.content_music -->
 
+        <div class="main_header_right">
+          <a href="#" class="btn btn_uppgrade"> Effettua l'upgrade </a>
+        </div>
+      </header>
+      <!-- /.main_header -->
+
+      <div class="row clearfix">
+        <div class="col_20">
+          <aside class="sidebar clearfix">
+            <ul>
+              <li>
+                <a href="#" class="light">
+                  <img src="./img/home.svg" alt="home" />
+                  <span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="primary">
+                  <img src="./img/search.svg" alt="search" />
+                  <span>Cerca</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="primary">
+                  <img src="./img/libreria.svg" alt="libreria" />
+                  <span>La tua libreria</span>
+                </a>
+              </li>
+            </ul>
+
+            <h5>playlist</h5>
+
+            <div class="square">
+              <div class="square_add">+</div>
+              <span class="primary"> Crea Playlist </span>
+            </div>
+
+            <ul class="nome_playlist primary">
+              <li>Nome Playlist</li>
+
+              <li>Nome Playlist</li>
+
+              <li>Nome Playlist</li>
+
+              <li>Nome Playlist</li>
+
+              <li>Nome Playlist</li>
+
+              <li>Nome Playlist</li>
+
+              <li>Nome Playlist</li>
+            </ul>
+
+            <div class="installa primary">
+                <img src="./img/download.svg" alt="installa">
+                <span>Installa app</span>
+            </div>
+          </aside>
+          <!-- /.sidebar -->
+        </div>
+        <div class="col_80">
+          <div class="content_music"></div>
+          <!-- /.content_music -->
+        </div>
+      </div>
     </main>
     <!-- /#site_main -->
 
     <footer id="site_footer" class="clearfix">
-        <div class="menu_left"></div>
-        <!-- /.menu_left -->
-        <div class="menu_center"></div>
-        <!-- /.menu_center -->
-        <div class="menu_right"></div>
-        <!-- /.menu_right -->
+      <div class="menu_left"></div>
+      <!-- /.menu_left -->
+      <div class="menu_center"></div>
+      <!-- /.menu_center -->
+      <div class="menu_right"></div>
+      <!-- /.menu_right -->
     </footer>
     <!-- /#site_footer -->
-
   </body>
 </html>
