@@ -5,6 +5,7 @@
 
   /* Color */
   --dark: rgba(8, 11, 18, 1);
+  --fourth: rgba(20, 25, 34, 1);
   --primary: rgba(110, 110, 110, 1);
   --third: rgba(173, 255, 47, 1);
   --secondary: rgba(210, 210, 210, 1);
@@ -285,8 +286,8 @@ a:hover {
 /* #endregion Main_header */
 
 /* #region Sidebar */
-.sidebar{
-    padding: 1rem;
+.sidebar {
+  padding: 1rem;
 }
 
 .sidebar a {
@@ -294,8 +295,8 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-.sidebar li{
-    list-style: none;
+.sidebar li {
+  list-style: none;
 }
 
 .sidebar ul span {
@@ -314,65 +315,116 @@ a:hover {
   filter: brightness(0.5);
 }
 
-.sidebar h5{
-    font-size: 11px;
-    font-weight: 500;
-    text-transform: uppercase;
+.sidebar h5 {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-.sidebar .square{
-    height: 25px;
-    display: flex;
-    align-items: center;
-    margin: 0.7rem 0;
+.sidebar .square {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  margin: 0.7rem 0;
 }
 
-.sidebar .square_add{
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    color: var(--dark);
-    background-color: var(--primary);
-    font-weight: 900;
-    font-size: 20px;
+.sidebar .square_add {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  color: var(--dark);
+  background-color: var(--primary);
+  font-weight: 900;
+  font-size: 20px;
 }
 
-.sidebar .square span{
-    float: left;
-    padding-left: 0.5rem;
-    font-size: 12px;
-    font-weight: 500;
+.sidebar .square span {
+  float: left;
+  padding-left: 0.5rem;
+  font-size: 12px;
+  font-weight: 500;
 }
 
-.sidebar .nome_playlist{
-    font-size: 10px;
-    font-weight: 900;
+.sidebar .nome_playlist {
+  font-size: 10px;
+  font-weight: 900;
 }
 
-.sidebar .nome_playlist li{
-      margin-top: 0.7rem;
+.sidebar .nome_playlist li {
+  margin-top: 0.7rem;
 }
 
-.sidebar .installa{
-    display: flex;
-    align-items: center;
-    margin-top: 330px;
+.sidebar .installa {
+  display: flex;
+  align-items: center;
+  margin-top: 330px;
 }
 
-.sidebar .installa img{
-    width: 15px;
-    filter: brightness(0.5);
+.sidebar .installa img {
+  width: 15px;
+  filter: brightness(0.5);
 }
 
-.sidebar .installa span{
-    font-size: 10px;
-    padding-left: 0.7rem;
-    font-weight: 900;
+.sidebar .installa span {
+  font-size: 10px;
+  padding-left: 0.7rem;
+  font-weight: 900;
 }
 /* #endregion Sidebar */
+
+/* #region Content Music */
+.content_music {
+  background-color: var(--fourth);
+  width: 100%;
+  padding: 1rem;
+}
+
+.content_music .col_100 {
+  display: flex;
+  justify-content: center;
+}
+
+.content_music .col_100 ul {
+  display: flex;
+  column-gap: 1.5rem;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.content_music .col_100 ul li {
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.content_music .col_100 ul li a {
+  color: var(--primary);
+}
+
+.content_music .col_100 ul li a:hover{
+    color: var(--light);
+}
+
+.content_music .col_100 .green_bar {
+  width: 40%;
+  height: 2px;
+  background-color: var(--third);
+  display: inline-block;
+}
+
+
+.content_music .img_played {
+    width: calc(100% / 6);
+}
+
+.content_music .img_played img{
+    width: 100%;
+}
+
+/* #endregion Content Music */
 
 .sidebar,
 .content_music {
