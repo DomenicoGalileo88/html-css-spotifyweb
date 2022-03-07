@@ -132,8 +132,8 @@ a:hover {
   margin: 2rem;
 }
 
-.mt_mezzo{
-    margin: 0.5rem
+.mt_mezzo {
+  margin: 0.5rem;
 }
 
 .mt_1 {
@@ -412,8 +412,8 @@ a:hover {
   color: var(--primary);
 }
 
-.content_music .col_100 ul li a:hover{
-    color: var(--light);
+.content_music .col_100 ul li a:hover {
+  color: var(--light);
 }
 
 .content_music .col_100 .green_bar {
@@ -423,28 +423,34 @@ a:hover {
   display: inline-block;
 }
 
-.content_music .recently_played{
-    display: flex;
-    column-gap: 1rem;
-
+.content_music .recently_played,
+.content_music .john_doe {
+  display: flex;
+  column-gap: 1rem;
 }
 
-.content_music .img_played {
-    width: calc(100% / 6);
-    text-align: center;
+.content_music .img_played,
+.content_music .img_john_doe {
+  width: calc(100% / 6);
+  text-align: center;
 }
 
-.content_music .img_played img{
-    width: 100%;
+.content_music .img_played img,
+.content_music .img_john_doe img {
+  width: 100%;
 }
 
-.content_music .img_played .subtitle{
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    font-weight: bold;
+.content_music .img_played .subtitle,
+.content_music .img_john_doe .subtitle {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
-
+.content_music .subtitle_john_doe {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
 
 /* #endregion Content Music */
 
