@@ -5,7 +5,7 @@
 
   /* Color */
   --dark: rgba(8, 11, 18, 1);
-  --prymary: rgba(110, 110, 110, 1);
+  --primary: rgba(110, 110, 110, 1);
   --third: rgba(173, 255, 47, 1);
   --secondary: rgba(210, 210, 210, 1);
   --light: rgba(255, 255, 255, 1);
@@ -20,13 +20,24 @@
 }
 
 body {
-    background-color: var(--dark);
+  background-color: var(--dark);
+  color: var(--light);
+  font-family: "Roboto", sans-serif;
 }
 
 a {
+  text-decoration: none;
 }
 
 a:hover {
+}
+
+.light {
+  color: var(--light);
+}
+
+.primary {
+  color: var(--primary);
 }
 
 /* #endregion Common */
@@ -66,6 +77,18 @@ a:hover {
 
 .pos_relative {
   position: relative;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+.flex {
+  display: flex;
 }
 
 .m_auto {
@@ -141,8 +164,8 @@ a:hover {
 }
 
 /* GRID */
-.position_relative{
-    position: relative;
+.position_relative {
+  position: relative;
 }
 
 .container_lg {
@@ -185,6 +208,10 @@ a:hover {
   width: 100%;
 }
 
+.col_80 {
+  width: 80%;
+}
+
 .col_70 {
   width: 70%;
 }
@@ -216,8 +243,10 @@ a:hover {
 /* Button */
 
 .btn {
-  padding: 5px 15px;
+  padding: 0.7rem 2.5rem;
   text-decoration: none;
+  border: 1px solid var(--light);
+  border-radius: 1.5rem;
 }
 
 /*  #endregion Utility */
@@ -225,14 +254,125 @@ a:hover {
 /* #region Main*/
 
 #site_main {
+}
+/* #region Main_header */
 
+.main_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
-.main_header img{
-    width: 40px;
+.main_header_left {
+  align-items: center;
+  column-gap: 0.5rem;
 }
 
+.main_header img {
+  width: 40px;
+}
 
+.main_header .title_logo {
+  font-size: 27px;
+}
+
+.btn_uppgrade {
+  color: var(--light);
+  text-transform: uppercase;
+}
+
+/* #endregion Main_header */
+
+/* #region Sidebar */
+.sidebar{
+    padding: 1rem;
+}
+
+.sidebar a {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar li{
+    list-style: none;
+}
+
+.sidebar ul span {
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.sidebar img {
+  width: 25px;
+}
+
+.sidebar .primary img {
+  filter: brightness(0.5);
+}
+
+.sidebar h5{
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.sidebar .square{
+    height: 25px;
+    display: flex;
+    align-items: center;
+    margin: 0.7rem 0;
+}
+
+.sidebar .square_add{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    color: var(--dark);
+    background-color: var(--primary);
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.sidebar .square span{
+    float: left;
+    padding-left: 0.5rem;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.sidebar .nome_playlist{
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.sidebar .nome_playlist li{
+      margin-top: 0.7rem;
+}
+
+.sidebar .installa{
+    display: flex;
+    align-items: center;
+    margin-top: 330px;
+}
+
+.sidebar .installa img{
+    width: 15px;
+    filter: brightness(0.5);
+}
+
+.sidebar .installa span{
+    font-size: 10px;
+    padding-left: 0.7rem;
+    font-weight: 900;
+}
+/* #endregion Sidebar */
 
 .sidebar,
 .content_music {
@@ -270,8 +410,10 @@ a:hover {
   bottom: 0;
 }
 
-.menu_left, .menu_center, .menu_right{
-    float: left;
+.menu_left,
+.menu_center,
+.menu_right {
+  float: left;
 }
 
 /* #region Debug Footer */
