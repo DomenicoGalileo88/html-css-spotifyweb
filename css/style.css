@@ -28,10 +28,6 @@ a {
 a:hover {
 }
 
-/* #region Debug_Common */
-
-/* #endregion Debug_Common */
-
 /* #endregion Common */
 
 /* #region Utility */
@@ -170,7 +166,7 @@ a:hover {
   width: 100%;
 }
 
-.row::after {
+.clearfix::after {
   content: "";
   display: table;
   clear: both;
@@ -221,16 +217,51 @@ a:hover {
 
 /*  #endregion Utility */
 
-/* #region Header */
-
-/* #endregion Debug_header */
-
-/* #endregion Header */
-
 /* #region Main*/
+
+#site_main {
+  height: calc(100vh - 100px);
+}
+
+.sidebar, .content_music{
+    float: left;
+    height: 90%;
+}
+
+/* #region Debug Main */
+.debug #site_main{
+    background-color: orange;
+}
+
+.debug .main_header{
+    background-color: rgba(0, 0, 255, 0.507);
+    height: 10% ;
+}
+
+.debug .sidebar{
+    width: 20%;
+    background-color: rgba(238, 130, 238, 0.603);
+}
+
+.debug .content_music{
+    width: 80%;
+    background-color: rgba(2, 173, 2, 0.63);
+}
+/* #endregion Debug Main */
 
 /* #endregion Main*/
 
 /* #region Footer */
+
+#site_footer {
+  height: 100px;
+}
+
+/* #region Debug Footer */
+.debug #site_footer {
+  background-color: red;
+}
+
+/* #endregion Debug Footer */
 
 /* #endregion Footer */
