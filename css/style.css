@@ -10,6 +10,7 @@
   --third: rgba(173, 255, 47, 1);
   --secondary: rgba(210, 210, 210, 1);
   --light: rgba(255, 255, 255, 1);
+  --color_footer: rgba(40, 40, 40, 1);
 }
 
 /* #region Common */
@@ -217,8 +218,8 @@ a:hover {
   width: 100%;
 }
 
-.col_85{
-    width: 85%;
+.col_85 {
+  width: 85%;
 }
 
 .col_80 {
@@ -253,8 +254,8 @@ a:hover {
   width: 20%;
 }
 
-.col_15{
-    width: 15%;
+.col_15 {
+  width: 15%;
 }
 
 /* Button */
@@ -465,8 +466,8 @@ a:hover {
   font-weight: bold;
 }
 
-.content_music .img_artisti_popolari img{
-    border-radius: 50%;
+.content_music .img_artisti_popolari img {
+  border-radius: 50%;
 }
 
 /* #endregion Content Music */
@@ -502,16 +503,54 @@ a:hover {
 /* #region Footer */
 
 #site_footer {
-  height: 100px;
+  background-color: var(--color_footer);
+  width: 100%;
+  height: 80px;
   position: fixed;
   bottom: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
-.menu_left,
-.menu_center,
-.menu_right {
-  float: left;
+.menu_left{
+    display: flex;
+
 }
+
+.menu_left .col_100{
+    display: flex;
+    align-items: center;
+}
+
+.menu_left img {
+  width: 42px;
+}
+
+.menu_left .text_music{
+    margin-left: 1rem;
+}
+
+.menu_left .title_music{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.menu_left .subtitle_music{
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.menu_left .icon_footer{
+    margin-left: 2.5rem;
+}
+
+.menu_left .icon_footer i{
+    font-size: 13px;
+    color: var(--primary);
+    padding: 0.2rem;
+}
+
 
 /* #region Debug Footer */
 .debug #site_footer {
