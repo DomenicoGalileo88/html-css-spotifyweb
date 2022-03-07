@@ -217,6 +217,10 @@ a:hover {
   width: 100%;
 }
 
+.col_85{
+    width: 85%;
+}
+
 .col_80 {
   width: 80%;
 }
@@ -247,6 +251,10 @@ a:hover {
 
 .col_20 {
   width: 20%;
+}
+
+.col_15{
+    width: 15%;
 }
 
 /* Button */
@@ -368,7 +376,7 @@ a:hover {
 .sidebar .installa {
   display: flex;
   align-items: center;
-  margin-top: 330px;
+  margin-top: 710px;
 }
 
 .sidebar .installa img {
@@ -387,7 +395,7 @@ a:hover {
 .content_music {
   background-color: var(--fourth);
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 1rem;
 }
 
 .content_music .col_100 {
@@ -424,32 +432,41 @@ a:hover {
 }
 
 .content_music .recently_played,
-.content_music .john_doe {
+.content_music .john_doe,
+.content_music .artisti_popolari {
   display: flex;
   column-gap: 1rem;
 }
 
 .content_music .img_played,
-.content_music .img_john_doe {
-  width: calc(100% / 6);
+.content_music .img_john_doe,
+.content_music .img_artisti_popolari {
+  width: calc(100% / 6 - 1rem);
   text-align: center;
 }
 
 .content_music .img_played img,
-.content_music .img_john_doe img {
+.content_music .img_john_doe img,
+.content_music .img_artisti_popolari img {
   width: 100%;
 }
 
 .content_music .img_played .subtitle,
-.content_music .img_john_doe .subtitle {
+.content_music .img_john_doe .subtitle,
+.content_music .img_artisti_popolari .subtitle {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   font-weight: bold;
 }
 
-.content_music .subtitle_john_doe {
+.content_music .subtitle_john_doe,
+.content_music .subtitle_artisti_popolari {
   font-size: 0.9rem;
   font-weight: bold;
+}
+
+.content_music .img_artisti_popolari img{
+    border-radius: 50%;
 }
 
 /* #endregion Content Music */
