@@ -274,6 +274,8 @@ a:hover {
 #site_main {
   height: calc(100vh - 80px - 60px);
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #site_main .sidebar,
@@ -318,6 +320,7 @@ a:hover {
 
 .sidebar {
   padding: 1rem;
+  overflow-y: auto;
 }
 
 .sidebar a {
@@ -390,7 +393,6 @@ a:hover {
 .sidebar .installa {
   display: flex;
   align-items: center;
-  margin-top: 710px;
 }
 
 .sidebar .installa img {
@@ -408,6 +410,8 @@ a:hover {
 /* #region Content Music */
 .content_music {
   background-color: var(--fourth);
+  display: flex;
+  flex-direction: column;
   width: calc(100% - 260px);
   padding: 1rem 2rem 1rem 1rem;
   overflow-y: auto;
@@ -431,7 +435,7 @@ a:hover {
   text-align: center;
 }
 
-.content_music .nav ul li a {
+.content_music nav ul li a {
   color: var(--primary);
 }
 
@@ -486,12 +490,6 @@ a:hover {
 
 /* #endregion Content Music */
 
-.sidebar,
-.content_music {
-  float: left;
-  height: calc(100% - 70px);
-}
-
 /* #region Debug Main */
 .debug #site_main {
   background-color: orange;
@@ -520,20 +518,17 @@ a:hover {
   background-color: var(--color_footer);
   height: 80px;
   display: flex;
-  justify-content: space-between;
 }
 
 .menu_left {
   display: flex;
-}
-
-.menu_left .col_100 {
-  display: flex;
   align-items: center;
+  width: 30%;
 }
 
 .menu_left img {
   width: 42px;
+  margin: 0 10px;
 }
 
 .menu_left .text_music {
@@ -559,6 +554,78 @@ a:hover {
   font-size: 13px;
   color: var(--primary);
   padding: 0.2rem;
+}
+
+.menu_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.menu_center .icon_footer {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu_center .icon_footer .large {
+  font-size: 30px;
+}
+
+.menu_center .time_bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu_center .time_bar .time_left {
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+.menu_center .time_bar .time_left .time_passed {
+  width: 25%;
+  height: 2px;
+  background-color: var(--light);
+}
+
+.menu_center .time_bar span {
+  margin: 0 1rem;
+}
+
+.menu_right {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.menu_right .icon_footer i {
+  font-size: 13px;
+  padding: 0.2rem;
+}
+
+.menu_right .volume_bar {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.menu_right .volume_bar .volume_left {
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+.menu_right .volume_bar .volume_left .volume_passed {
+  width: 25%;
+  height: 2px;
+  background-color: var(--light);
 }
 
 /* #region Debug Footer */
