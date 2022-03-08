@@ -272,6 +272,12 @@ a:hover {
 /* #region Main*/
 
 #site_main {
+  height: calc(100vh - 80px);
+}
+
+#site_main .sidebar,
+#site_main .content_music {
+  height: 100%;
 }
 /* #region Main_header */
 
@@ -303,6 +309,12 @@ a:hover {
 /* #endregion Main_header */
 
 /* #region Sidebar */
+
+.sidebar {
+  width: 100px;
+  transition: all 1s;
+}
+
 .sidebar {
   padding: 1rem;
 }
@@ -395,7 +407,7 @@ a:hover {
 /* #region Content Music */
 .content_music {
   background-color: var(--fourth);
-  width: 100%;
+  width: calc(100% - 100px);
   padding: 1rem 2rem 1rem 1rem;
 }
 
@@ -512,45 +524,43 @@ a:hover {
   justify-content: space-between;
 }
 
-.menu_left{
-    display: flex;
-
+.menu_left {
+  display: flex;
 }
 
-.menu_left .col_100{
-    display: flex;
-    align-items: center;
+.menu_left .col_100 {
+  display: flex;
+  align-items: center;
 }
 
 .menu_left img {
   width: 42px;
 }
 
-.menu_left .text_music{
-    margin-left: 1rem;
+.menu_left .text_music {
+  margin-left: 1rem;
 }
 
-.menu_left .title_music{
-    font-size: 13px;
-    font-weight: bold;
+.menu_left .title_music {
+  font-size: 13px;
+  font-weight: bold;
 }
 
-.menu_left .subtitle_music{
-    font-size: 10px;
-    font-weight: bold;
-    color: var(--primary);
+.menu_left .subtitle_music {
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--primary);
 }
 
-.menu_left .icon_footer{
-    margin-left: 2.5rem;
+.menu_left .icon_footer {
+  margin-left: 2.5rem;
 }
 
-.menu_left .icon_footer i{
-    font-size: 13px;
-    color: var(--primary);
-    padding: 0.2rem;
+.menu_left .icon_footer i {
+  font-size: 13px;
+  color: var(--primary);
+  padding: 0.2rem;
 }
-
 
 /* #region Debug Footer */
 .debug #site_footer {
