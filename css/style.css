@@ -210,9 +210,9 @@ a:hover {
   clear: both;
 }
 
-[class^="col_"] {
+/* [class^="col_"] {
   float: left;
-}
+} */
 
 .col_100 {
   width: 100%;
@@ -272,7 +272,7 @@ a:hover {
 /* #region Main*/
 
 #site_main {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 80px - 60px);
 }
 
 #site_main .sidebar,
@@ -411,33 +411,33 @@ a:hover {
   padding: 1rem 2rem 1rem 1rem;
 }
 
-.content_music .col_100 {
+.content_music nav {
   display: flex;
   justify-content: center;
 }
 
-.content_music .col_100 ul {
+.content_music nav ul {
   display: flex;
   column-gap: 1.5rem;
   font-size: 12px;
   font-weight: 900;
 }
 
-.content_music .col_100 ul li {
+.content_music nav ul li {
   list-style: none;
   text-transform: uppercase;
   text-align: center;
 }
 
-.content_music .col_100 ul li a {
+.content_music .nav ul li a {
   color: var(--primary);
 }
 
-.content_music .col_100 ul li a:hover {
+.content_music nav ul li a:hover {
   color: var(--light);
 }
 
-.content_music .col_100 .green_bar {
+.content_music nav .green_bar {
   width: 40%;
   height: 2px;
   background-color: var(--third);
