@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>spotifyweb</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -26,31 +23,30 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    
     <main id="site_main">
       <header class="main_header">
-      <div class="main_header_left flex">
-        <img src="./img/logo-small.svg" alt="logo_spotify" />
-        <span class="title_logo">Spotify</span>
-      </div>
+        <div class="main_header_left flex">
+          <img src="./img/logo-small.svg" alt="logo_spotify" />
+          <span class="title_logo"> Spotify </span>
+        </div>
 
-      <div class="main_header_right">
-        <a href="#" class="btn_uppgrade"> Effettua l'upgrade </a>
-      </div>
-    </header>
-    <!-- /.main_header -->
+        <div class="main_header_right">
+          <a href="#" class="btn_uppgrade"> Effettua l'upgrade </a>
+        </div>
+      </header>
+      <!-- /.main_header -->
       <aside class="sidebar">
-        <ul>
+        <ul class="utils">
           <li>
             <a href="#" class="light">
               <img src="./img/home.svg" alt="home" />
-              <span>Home</span>
+              <span> Home </span>
             </a>
           </li>
           <li>
             <a href="#" class="primary">
               <img src="./img/search.svg" alt="search" />
-              <span>Cerca</span>
+              <span> Cerca </span>
             </a>
           </li>
           <li>
@@ -60,7 +56,7 @@
             </a>
           </li>
         </ul>
-
+        <!-- /.utils -->
         <h5>playlist</h5>
 
         <a href="#">
@@ -68,6 +64,7 @@
             <div class="square_add">+</div>
             <span class="primary"> Crea Playlist </span>
           </div>
+          <!-- /.square -->
         </a>
 
         <ul class="nome_playlist">
@@ -114,6 +111,7 @@
             <a href="#"> Nome Playlist </a>
           </li>
         </ul>
+        <!-- /.nome_playlist -->
 
         <div class="installa">
           <a href="#">
@@ -121,6 +119,7 @@
             <span> Installa app </span>
           </a>
         </div>
+        <!-- /.installa -->
 
         <div class="profile">
           <div class="icon_john_doe">
@@ -128,11 +127,12 @@
           </div>
           <span>John Doe</span>
         </div>
+        <!-- /.profile -->
       </aside>
       <!-- /.sidebar -->
 
       <div class="content_music">
-        <nav>
+        <nav id="main_navbar">
           <ul>
             <li>
               <a href="#"> in evidenza </a>
@@ -155,6 +155,7 @@
             </li>
           </ul>
         </nav>
+        <!-- /#main_navbar -->
 
         <h2 class="mb_2 mt_3">Recently played</h2>
 
@@ -203,6 +204,7 @@
             <div class="subtitle primary">Subtitle</div>
           </div>
         </div>
+        <!-- /.recently_played -->
 
         <h2 class="mb_1 mt_3">Creato per John Doe</h2>
         <div class="subtitle_john_doe primary mb_2">
@@ -222,6 +224,7 @@
             <h4 class="mt_1">Daily Mix 1</h4>
           </div>
         </div>
+        <!-- /.john_doe -->
 
         <h2 class="mb_1 mt_3">Artisti più popolari</h2>
         <div class="subtitle_artisti_popolari primary mb_2">
@@ -242,8 +245,9 @@
             <h4 class="mt_1">Ludovico Einaudi</h4>
           </div>
         </div>
-        <!-- /.content_music -->
+        <!-- /.artisti_popolari -->
       </div>
+      <!-- /.content_music -->
     </main>
     <!-- /#site_main -->
 
@@ -300,4 +304,3 @@
   </body>
 </html>
 
-<!-- aggiungi john doe cion -->
