@@ -485,28 +485,35 @@ a:hover {
 .content_music .artisti_popolari {
   display: flex;
   column-gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.content_music .recently_played i {
+.content_music .recently_played i,
+.content_music .john_doe i,
+.content_music .artisti_popolari i {
   visibility: hidden;
   font-size: 4rem;
   position: absolute;
   top: 23%;
 }
 
-.img_played:hover i {
+.img_played:hover i,
+.img_john_doe:hover i,
+.img_artisti_popolari:hover i {
   visibility: visible;
   z-index: 1;
 }
 
-.img_played:hover img {
+.img_played:hover img,
+.img_john_doe:hover img,
+.img_artisti_popolari:hover img {
   filter: brightness(0.5);
 }
 
 .content_music .img_played,
 .content_music .img_john_doe,
 .content_music .img_artisti_popolari {
-  width: calc(100% / 6 - 1rem);
+  width: 180px;
   text-align: center;
   position: relative;
   display: flex;
@@ -517,7 +524,7 @@ a:hover {
 .content_music .img_played img,
 .content_music .img_john_doe img,
 .content_music .img_artisti_popolari img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .content_music .img_played .subtitle,
