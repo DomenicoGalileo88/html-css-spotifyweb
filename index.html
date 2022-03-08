@@ -7,6 +7,10 @@
     <title>spotifyweb</title>
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
       crossorigin="anonymous"
@@ -29,12 +33,12 @@
       </div>
 
       <div class="main_header_right">
-        <a href="#" class="btn btn_uppgrade"> Effettua l'upgrade </a>
+        <a href="#" class="btn_uppgrade"> Effettua l'upgrade </a>
       </div>
     </header>
     <!-- /.main_header -->
     <main id="site_main">
-      <aside class="sidebar clearfix">
+      <aside class="sidebar">
         <ul>
           <li>
             <a href="#" class="light">
@@ -58,25 +62,50 @@
 
         <h5>playlist</h5>
 
-        <div class="square">
-          <div class="square_add">+</div>
-          <span class="primary"> Crea Playlist </span>
-        </div>
+        <a href="#">
+          <div class="square">
+            <div class="square_add">+</div>
+            <span class="primary"> Crea Playlist </span>
+          </div>
+        </a>
 
-        <ul class="nome_playlist primary">
-          <li>Nome Playlist</li>
+        <ul class="nome_playlist">
+          <li>
+            <a href="#">
+              Nome Playlist
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Nome Playlist
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Nome Playlist
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Nome Playlist
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Nome Playlist
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Nome Playlist
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Nome Playlist
+            </a>
+          </li>
 
-          <li>Nome Playlist</li>
-
-          <li>Nome Playlist</li>
-
-          <li>Nome Playlist</li>
-
-          <li>Nome Playlist</li>
-
-          <li>Nome Playlist</li>
-
-          <li>Nome Playlist</li>
         </ul>
 
         <div class="installa primary">
@@ -115,12 +144,14 @@
 
         <div class="container_lg recently_played">
           <div class="img_played">
+            <i class="fa-regular fa-circle-play"></i>
             <img src="./img/metal_lifting.jpg" alt="metal_lifting" />
             <h4 class="mt_1">Heavry Metal</h4>
             <div class="subtitle primary">Subtitle</div>
           </div>
 
           <div class="img_played">
+            <i class="fa-regular fa-circle-play"></i>
             <img src="./img/stranger.jpeg" alt="stranger" />
             <h4 class="mt_1">
               Streanger Things, Vol 1(a Netflix Original Series Soundtrack)
@@ -129,24 +160,28 @@
           </div>
 
           <div class="img_played">
+            <i class="fa-regular fa-circle-play"></i>
             <img src="./img/aquietplace.jpeg" alt="a_quiet_place" />
             <h4 class="mt_1">A quiet place</h4>
             <div class="subtitle primary">Subtitle</div>
           </div>
 
           <div class="img_played">
+            <i class="fa-regular fa-circle-play"></i>
             <img src="./img/split.jpeg" alt="split" />
             <h4 class="mt_1">Split</h4>
             <div class="subtitle primary">Subtitle</div>
           </div>
 
           <div class="img_played">
+            <i class="fa-regular fa-circle-play"></i>
             <img src="./img/cure.jpeg" alt="a_cure_for_wellness" />
             <h4 class="mt_1">A cure for wellness</h4>
             <div class="subtitle primary">Subtitle</div>
           </div>
 
           <div class="img_played">
+            <i class="fa-regular fa-circle-play"></i>
             <img src="./img/sinister.jpeg" alt="sinister" />
             <h4 class="mt_1">Sinister</h4>
             <div class="subtitle primary">Subtitle</div>
@@ -193,41 +228,37 @@
 
     <footer id="site_footer">
       <div class="menu_left">
-      
-          <img src="./img/sinister.jpeg" alt="sinister" />
-          <div class="text_music">
-            <div class="title_music">Sinister</div>
-            <div class="subtitle_music">Brano Nome</div>
-          </div>
+        <img src="./img/sinister.jpeg" alt="sinister" />
+        <div class="text_music">
+          <div class="title_music">Sinister</div>
+          <div class="subtitle_music">Brano Nome</div>
+        </div>
 
-          <div class="icon_footer">
-            <i class="far fa-heart"></i>
-            <i class="far fa-folder"></i>
-          </div>
-       
+        <div class="icon_footer">
+          <i class="far fa-heart"></i>
+          <i class="far fa-folder"></i>
+        </div>
       </div>
       <!-- /.menu_left -->
       <div class="menu_center">
-        
-          <div class="icon_footer">
-            <i class="fas fa-random"></i>
-            <i class="fas fa-step-backward"></i>
-            <i class="far fa-play-circle large"></i>
-            <i class="fas fa-step-forward"></i>
-            <i class="fa-solid fa-rotate-right"></i>
-          </div>
+        <div class="icon_footer">
+          <i class="fas fa-random"></i>
+          <i class="fas fa-step-backward"></i>
+          <i class="far fa-play-circle large"></i>
+          <i class="fas fa-step-forward"></i>
+          <i class="fa-solid fa-rotate-right"></i>
+        </div>
 
-          <div class="time_bar">
-            <span>0:25</span>
-            <div class="time_left">
-              <div class="time_passed"></div>
-            </div>
-            <span>4:35</span>
+        <div class="time_bar">
+          <span>0:25</span>
+          <div class="time_left">
+            <div class="time_passed"></div>
           </div>
+          <span>4:35</span>
+        </div>
       </div>
       <!-- /.menu_center -->
       <div class="menu_right">
-
         <div class="icon_footer">
           <i class="fa-solid fa-bars"></i>
           <i class="fa-solid fa-desktop"></i>
@@ -239,7 +270,6 @@
             <div class="volume_passed"></div>
           </div>
         </div>
-
       </div>
       <!-- /.menu_right -->
     </footer>

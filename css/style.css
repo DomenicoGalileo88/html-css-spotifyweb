@@ -301,12 +301,24 @@ a:hover {
 }
 
 .main_header .title_logo {
-  font-size: 27px;
+  font-size: 25px;
 }
 
 .btn_uppgrade {
   color: var(--light);
   text-transform: uppercase;
+  font-size: 9px;
+  border: 1px solid var(--light);
+  padding: 5px 20px;
+  border-radius: 1rem;
+}
+
+.main_header_right {
+  margin-right: 3rem;
+}
+
+.main_header_right:hover {
+  transform: scale(1.2);
 }
 
 /* #endregion Main_header */
@@ -315,10 +327,6 @@ a:hover {
 
 .sidebar {
   width: 260px;
-  transition: all 1s;
-}
-
-.sidebar {
   padding: 1rem;
   overflow-y: auto;
 }
@@ -326,6 +334,18 @@ a:hover {
 .sidebar a {
   display: flex;
   margin-bottom: 0.5rem;
+}
+
+.sidebar a:hover img {
+  filter: none;
+}
+
+.sidebar a:hover span {
+  color: var(--light);
+}
+
+.sidebar a:hover .square_add {
+  background-color: var(--light);
 }
 
 .sidebar li {
@@ -387,12 +407,22 @@ a:hover {
 }
 
 .sidebar .nome_playlist li {
-  margin-top: 0.7rem;
+  margin-top: 1rem;
+}
+
+.sidebar .nome_playlist a {
+  color: var(--primary);
+}
+
+.sidebar .nome_playlist a:hover {
+  color: var(--light);
 }
 
 .sidebar .installa {
   display: flex;
   align-items: center;
+  position: absolute;
+  bottom: 80px;
 }
 
 .sidebar .installa img {
@@ -457,11 +487,31 @@ a:hover {
   column-gap: 1rem;
 }
 
+.content_music .recently_played i {
+  visibility: hidden;
+  font-size: 4rem;
+  position: absolute;
+  top: 23%;
+}
+
+.img_played:hover i {
+  visibility: visible;
+  z-index: 1;
+}
+
+.img_played:hover img {
+  filter: brightness(0.5);
+}
+
 .content_music .img_played,
 .content_music .img_john_doe,
 .content_music .img_artisti_popolari {
   width: calc(100% / 6 - 1rem);
   text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content_music .img_played img,
@@ -590,7 +640,7 @@ a:hover {
 .menu_center .time_bar .time_left .time_passed {
   width: 25%;
   height: 2px;
-  background-color: var(--light);
+  background-color: var(--secondary);
 }
 
 .menu_center .time_bar span {
@@ -625,7 +675,7 @@ a:hover {
 .menu_right .volume_bar .volume_left .volume_passed {
   width: 25%;
   height: 2px;
-  background-color: var(--light);
+  background-color: var(--secondary);
 }
 
 /* #region Debug Footer */
