@@ -425,6 +425,10 @@ a:hover {
   bottom: 80px;
 }
 
+.sidebar .installa a {
+  color: var(--primary);
+}
+
 .sidebar .installa img {
   width: 15px;
   filter: brightness(0.5);
@@ -603,6 +607,11 @@ a:hover {
   color: var(--primary);
 }
 
+.menu_left .subtitle_music:hover {
+  color: var(--light);
+  text-decoration: underline;
+}
+
 .menu_left .icon_footer {
   margin-left: 2.5rem;
 }
@@ -611,6 +620,11 @@ a:hover {
   font-size: 13px;
   color: var(--primary);
   padding: 0.2rem;
+  cursor: pointer;
+}
+
+.menu_left .icon_footer i:hover {
+  color: var(--light);
 }
 
 .menu_center {
@@ -630,6 +644,11 @@ a:hover {
 
 .menu_center .icon_footer .large {
   font-size: 30px;
+  transition: 100ms;
+}
+
+.menu_center .icon_footer .large:hover{
+  transform: scale(1.1);
 }
 
 .menu_center .time_bar {
@@ -642,12 +661,33 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: var(--primary);
+  position: relative;
+  cursor: pointer;
 }
 
 .menu_center .time_bar .time_left .time_passed {
   width: 25%;
   height: 2px;
   background-color: var(--secondary);
+}
+
+.menu_center .time_bar .time_left:hover .time_passed{
+  background-color: var(--third);
+}
+
+.menu_center .time_bar .time_left .time_vision {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--light);
+  position: absolute;
+  top: -3px;
+  left: 25%;
+  visibility: hidden;
+}
+
+.menu_center .time_bar .time_left:hover .time_vision{
+  visibility: visible;
 }
 
 .menu_center .time_bar span {
@@ -659,6 +699,10 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: end;
+}
+
+.menu_right .icon_footer .small{
+  font-size: 8px;
 }
 
 .menu_right .icon_footer i {
@@ -674,15 +718,36 @@ a:hover {
 }
 
 .menu_right .volume_bar .volume_left {
+  position: relative;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: var(--primary);
+  cursor: pointer;
 }
 
 .menu_right .volume_bar .volume_left .volume_passed {
   width: 25%;
-  height: 2px;
+  height: 3px;
   background-color: var(--secondary);
+}
+
+.menu_right .volume_bar .volume_left:hover .volume_passed{
+  background-color: var(--third);
+}
+
+.menu_right .volume_bar .volume_vision {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--light);
+  position: absolute;
+  top: -3px;
+  left: 25%;
+  visibility: hidden;
+}
+
+.menu_right .volume_bar .volume_left:hover .volume_vision{
+  visibility: visible;
 }
 
 /* #region Debug Footer */
