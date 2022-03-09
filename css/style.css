@@ -692,26 +692,26 @@ h4{
 
 @media screen and (max-width:1024px) {
 
-  :root{
+:root{
   --font_size_small: 13px;
   --font_size_md: 15px;
   --font_size_lg: 16px;
   --font_size_h4: 1rem;
   }
 
-  .sidebar{
+.sidebar{
     width: 200px;
     transition: all 1s;
 
   }
 
-  .content_music{
+.content_music{
      width: calc(100% - 200px);
      transition: all 1s;
 
   }
   
-  .content_music .img_played,
+.content_music .img_played,
 .content_music .img_john_doe,
 .content_music .img_artisti_popolari {
   width: calc(100% / 4 - 1rem);
@@ -720,6 +720,7 @@ h4{
 
 .content_music .screen_1024{
   margin-top: 2rem;
+  display: none;
 }
 }
 
@@ -754,6 +755,7 @@ h4{
 .content_music .screen_1024,
 .content_music .screen_768{
   margin-top: 2rem;
+  display: none;
 }
 }
 
@@ -951,4 +953,8 @@ h2{
   height: 70px;
 }
 
+}
+
+@media screen and (max-height:) {
+  
 }
