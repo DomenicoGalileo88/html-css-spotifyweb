@@ -186,6 +186,20 @@ h4{
   margin-bottom: 0.5rem;
 }
 
+.display_visible{
+    padding-bottom: 1rem;
+    visibility: hidden;
+}
+
+.display_visible span{
+  font-size: 25px;
+  padding-left: 0.5rem;
+}
+
+.display_visible img{
+  width: 40px;
+}
+
 .sidebar a:hover img {
   filter: none;
 }
@@ -210,7 +224,7 @@ h4{
   font-weight: 700;
 }
 
-.sidebar img {
+.sidebar ul img {
   width: 25px;
 }
 
@@ -955,6 +969,19 @@ h2{
 
 }
 
-@media screen and (max-height:) {
-  
+@media screen and (max-height:320px) {
+
+#site_main .sidebar,
+#site_main .content_music {
+  height: 100%;
+}
+
+.main_header{
+    display: none;
+  }
+
+.display_visible{
+  visibility: visible;
+}
+
 }
