@@ -3,6 +3,10 @@
 :root {
   /* Font */
   --font_roboto: "Roboto", sans-serif;
+  --font_size_small: 20px;
+  --font_size_md: 24px;
+  --font_size_lg: 26px;
+  --font_size_h4: 1.5rem;
   /* Color */
   --dark: rgba(8, 11, 18, 1);
   --fourth: rgba(20, 25, 34, 1);
@@ -29,6 +33,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+h4{
+  font-size: var(--font_size_h4);
 }
 
 .light {
@@ -146,7 +154,7 @@ a {
 .btn_uppgrade {
   color: var(--light);
   text-transform: uppercase;
-  font-size: 9px;
+  font-size: var(--font_size_small);
   border: 1px solid var(--light);
   padding: 5px 20px;
   border-radius: 1rem;
@@ -165,9 +173,12 @@ a {
 /* #region Sidebar */
 
 .sidebar {
-  width: 260px;
+  width: 320px;
   padding: 1rem;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .sidebar a {
@@ -195,7 +206,7 @@ a {
   padding-left: 0.5rem;
   display: flex;
   align-items: center;
-  font-size: 10px;
+  font-size: var(--font_size_small);
   font-weight: 700;
 }
 
@@ -208,7 +219,7 @@ a {
 }
 
 .sidebar h5 {
-  font-size: 11px;
+  font-size: var(--font_size_md);
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -236,12 +247,12 @@ a {
 .sidebar .square span {
   float: left;
   padding-left: 0.5rem;
-  font-size: 12px;
+  font-size: var(--font_size_md);
   font-weight: 500;
 }
 
 .sidebar .nome_playlist {
-  font-size: 10px;
+  font-size: var(--font_size_small);
   font-weight: 900;
   max-height: 200px;
   overflow: auto;
@@ -262,12 +273,12 @@ a {
 .sidebar .installa {
   display: flex;
   align-items: center;
-  margin-top: 7rem;
   border-bottom: 1px solid var(--primary);
 }
 
 .sidebar .installa a {
   color: var(--primary);
+  font-size: var(--font_size_small);
 }
 
 .sidebar .installa img {
@@ -276,7 +287,7 @@ a {
 }
 
 .sidebar .installa span {
-  font-size: 10px;
+  font-size: var(--font_size_small);
   padding-left: 0.7rem;
   font-weight: 900;
 }
@@ -303,7 +314,7 @@ a {
 }
 
 .sidebar .profile span{
-  font-size: 12px;
+  font-size: var(--font_size_md)
   padding-left: 1rem;
 }
 /* #endregion Sidebar */
@@ -313,7 +324,7 @@ a {
   background-color: var(--fourth);
   display: flex;
   flex-direction: column;
-  width: calc(100% - 260px);
+  width: calc(100% - 320px);
   padding: 1rem 2rem 1rem 1rem;
   overflow-y: auto;
 }
@@ -326,7 +337,7 @@ a {
 .content_music nav ul {
   display: flex;
   column-gap: 1.5rem;
-  font-size: 12px;
+  font-size: var(--font_size_md);
   font-weight: 900;
 }
 
@@ -384,7 +395,7 @@ a {
 .content_music .img_played,
 .content_music .img_john_doe,
 .content_music .img_artisti_popolari {
-  width: 180px;
+  width: 230px;
   text-align: center;
   position: relative;
   display: flex;
@@ -402,13 +413,13 @@ a {
 .content_music .img_john_doe .subtitle,
 .content_music .img_artisti_popolari .subtitle {
   margin-top: 0.5rem;
-  font-size: 0.9rem;
+  font-size: var(--font_size_small);
   font-weight: bold;
 }
 
 .content_music .subtitle_john_doe,
 .content_music .subtitle_artisti_popolari {
-  font-size: 0.9rem;
+  font-size: var(--font_size_small);
   font-weight: bold;
 }
 
@@ -465,12 +476,12 @@ a {
 }
 
 .menu_left .title_music {
-  font-size: 13px;
+  font-size: var(--font_size_lg);
   font-weight: bold;
 }
 
 .menu_left .subtitle_music {
-  font-size: 10px;
+  font-size: var(--font_size_small);
   font-weight: bold;
   color: var(--primary);
 }
@@ -485,7 +496,7 @@ a {
 }
 
 .menu_left .icon_footer i {
-  font-size: 13px;
+  font-size: var(--font_size_lg);
   color: var(--primary);
   padding: 0.2rem;
   cursor: pointer;
@@ -654,3 +665,29 @@ a {
 /* #endregion Debug Footer */
 
 /* #endregion Footer */
+
+
+@media screen and (max-width:1440px) {
+
+  :root{
+  --font_size_small: 10px;
+  --font_size_md: 12px;
+  --font_size_lg: 13px;
+  --font_size_h4: 1rem;
+  }
+
+  .sidebar{
+    width: 260px;
+  }
+
+  .content_music{
+     width: calc(100% - 260px);
+  }
+
+  .content_music .img_played,
+.content_music .img_john_doe,
+.content_music .img_artisti_popolari {
+  width: 180px;
+}
+  
+}
