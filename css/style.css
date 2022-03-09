@@ -3,10 +3,10 @@
 :root {
   /* Font */
   --font_roboto: "Roboto", sans-serif;
-  --font_size_small: 17px;
-  --font_size_md: 19px;
-  --font_size_lg: 20px;
-  --font_size_h4: 1.3rem;
+  --font_size_small: 12px;
+  --font_size_md: 14px;
+  --font_size_lg: 15px;
+  --font_size_h4: 1rem;
   /* Color */
   --dark: rgba(8, 11, 18, 1);
   --fourth: rgba(20, 25, 34, 1);
@@ -187,8 +187,8 @@ h4{
 }
 
 .display_visible{
-    padding-bottom: 1rem;
     visibility: hidden;
+    position: absolute;
 }
 
 .display_visible span{
@@ -686,10 +686,10 @@ h4{
 @media screen and (max-width:1440px) {
 
   :root{
-  --font_size_small: 15px;
-  --font_size_md: 17px;
-  --font_size_lg: 18px;
-  --font_size_h4: 1.2rem;
+  --font_size_small: 12px;
+  --font_size_md: 14px;
+  --font_size_lg: 15px;
+  --font_size_h4: 1rem;
   }
 
   .sidebar{
@@ -707,10 +707,10 @@ h4{
 @media screen and (max-width:1024px) {
 
 :root{
-  --font_size_small: 13px;
-  --font_size_md: 15px;
-  --font_size_lg: 16px;
-  --font_size_h4: 1rem;
+  --font_size_small: 11px;
+  --font_size_md: 13px;
+  --font_size_lg: 14px;
+  --font_size_h4: 0.9rem;
   }
 
 .sidebar{
@@ -741,10 +741,10 @@ h4{
 @media screen and (max-width:768px) {
 
   :root{
-  --font_size_small: 13px;
-  --font_size_md: 15px;
-  --font_size_lg: 16px;
-  --font_size_h4: 1rem;
+  --font_size_small: 10px;
+  --font_size_md: 12px;
+  --font_size_lg: 13px;
+  --font_size_h4: 0.8rem;
   }
 
   .sidebar{
@@ -858,7 +858,7 @@ h2{
 }
 
 .menu_center {
-  width: 320px;
+  width: 568px;
 }
 
 #site_main {
@@ -981,7 +981,9 @@ h2{
   }
 
 .display_visible{
+  position: relative;
   visibility: visible;
+  padding-bottom: 1rem;
 }
 
 }
