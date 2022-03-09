@@ -3,10 +3,10 @@
 :root {
   /* Font */
   --font_roboto: "Roboto", sans-serif;
-  --font_size_small: 20px;
-  --font_size_md: 24px;
-  --font_size_lg: 26px;
-  --font_size_h4: 1.5rem;
+  --font_size_small: 17px;
+  --font_size_md: 19px;
+  --font_size_lg: 20px;
+  --font_size_h4: 1.3rem;
   /* Color */
   --dark: rgba(8, 11, 18, 1);
   --fourth: rgba(20, 25, 34, 1);
@@ -766,21 +766,53 @@ h4{
   --font_size_h4: 0.7rem;
   }
 
-   h2{
-    font-size: 1.5rem;
+h2{
+    font-size: 1.2rem;
   }
 
-  .sidebar{
-    width: 50px;
+.main_header{
+    padding: 6px;
+  }
+
+.main_header img {
+    width: 25px;
+}
+
+.main_header_right {
+  margin-right: 1rem;
+}
+
+.sidebar{
+    width: 38px;
     transition: all 1s;
-
+    padding: 0.3rem 0.3rem 0 0.3rem;
+    overflow: hidden;
   }
+
+.sidebar .profile{
+  display: inline-block;
+  margin-top: 0;
+}
+
+.sidebar .installa {
+  border-bottom: 0px solid var(--primary);
+  margin-bottom: 1rem;
+}
+
+.sidebar .installa img {
+  width: 25px;
+  filter: brightness(0.5);
+}
 
 .content_music{
-  width: calc(100% - 50px);
+  width: calc(100% - 38px);
   transition: all 1s;
   padding: 0.3rem 0.6rem 0.3rem 0.3rem;
   }
+
+  .content_music nav ul {
+  font-size: var(--font_size_small);
+}
 
 .content_music .recently_played,
 .content_music .john_doe,
@@ -810,10 +842,6 @@ h4{
 }
 
 .menu_center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 320px;
 }
 
@@ -823,22 +851,6 @@ h4{
 
 #site_footer {
   height: 70px;
-}
-
-.main_header img {
-  width: 25px;
-}
-
-.main_header_right {
-  margin-right: 1rem;
-}
-
-.content_music nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 1rem;
-  font-size: var(--font_size_small);
 }
 
 }
@@ -852,15 +864,15 @@ h4{
   --font_size_h4: 0.7rem;
   }
 
-  h2{
+h2{
     font-size: 1.2rem;
   }
 
-  .main_header{
+.main_header{
     padding: 6px;
   }
 
-  .main_header img {
+.main_header img {
     width: 25px;
 }
 
@@ -868,14 +880,14 @@ h4{
   margin-right: 1rem;
 }
 
-  .sidebar{
+.sidebar{
     width: 38px;
     transition: all 1s;
     padding: 0.3rem 0.3rem 0 0.3rem;
     overflow: hidden;
   }
 
-  .sidebar .profile{
+.sidebar .profile{
   display: inline-block;
   margin-top: 0;
 }
