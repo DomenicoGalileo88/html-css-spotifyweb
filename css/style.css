@@ -336,6 +336,8 @@ h4{
 
 .content_music nav ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   column-gap: 1.5rem;
   font-size: var(--font_size_md);
   font-weight: 900;
@@ -395,7 +397,7 @@ h4{
 .content_music .img_played,
 .content_music .img_john_doe,
 .content_music .img_artisti_popolari {
-  width: 230px;
+  width: calc(100% / 6 - 1rem);
   text-align: center;
   position: relative;
   display: flex;
@@ -670,24 +672,146 @@ h4{
 @media screen and (max-width:1440px) {
 
   :root{
-  --font_size_small: 10px;
-  --font_size_md: 12px;
-  --font_size_lg: 13px;
-  --font_size_h4: 1rem;
+  --font_size_small: 15px;
+  --font_size_md: 17px;
+  --font_size_lg: 18px;
+  --font_size_h4: 1.2rem;
   }
 
   .sidebar{
     width: 260px;
+    transition: all 1s;
   }
 
   .content_music{
      width: calc(100% - 260px);
+     transition: all 1s;
+  }
+  
+}
+
+@media screen and (max-width:1024px) {
+
+  :root{
+  --font_size_small: 13px;
+  --font_size_md: 15px;
+  --font_size_lg: 16px;
+  --font_size_h4: 1rem;
   }
 
+  .sidebar{
+    width: 200px;
+    transition: all 1s;
+
+  }
+
+  .content_music{
+     width: calc(100% - 200px);
+     transition: all 1s;
+
+  }
+  
   .content_music .img_played,
 .content_music .img_john_doe,
 .content_music .img_artisti_popolari {
-  width: 180px;
+  width: calc(100% / 4 - 1rem);
+  transition: all 1s;
 }
+
+.content_music .screen_1024{
+  margin-top: 2rem;
+}
+}
+
+@media screen and (max-width:768px) {
+
+  :root{
+  --font_size_small: 13px;
+  --font_size_md: 15px;
+  --font_size_lg: 16px;
+  --font_size_h4: 1rem;
+  }
+
+  .sidebar{
+    width: 200px;
+    transition: all 1s;
+
+  }
+
+  .content_music{
+     width: calc(100% - 200px);
+     transition: all 1s;
+
+  }
   
+  .content_music .img_played,
+.content_music .img_john_doe,
+.content_music .img_artisti_popolari {
+  width: calc(100% / 2 - 1rem);
+  transition: all 1s;
+}
+
+.content_music .screen_1024,
+.content_music .screen_768{
+  margin-top: 2rem;
+}
+}
+
+@media screen and (max-width:320px) {
+
+  :root{
+  --font_size_small: 13px;
+  --font_size_md: 15px;
+  --font_size_lg: 16px;
+  --font_size_h4: 1rem;
+  }
+
+  .sidebar{
+    width: 50px;
+    transition: all 1s;
+
+  }
+
+  .content_music{
+     width: calc(100% - 50px);
+     transition: all 1s;
+
+  }
+  
+  .content_music .img_played,
+.content_music .img_john_doe,
+.content_music .img_artisti_popolari {
+  width: calc(100% / 2 - 1rem);
+  transition: all 1s;
+}
+
+.content_music .screen_1024,
+.content_music .screen_768{
+  margin-top: 2rem;
+}
+
+.screen_text_320{
+  visibility: hidden;
+}
+
+.screen_display_320{
+  visibility: hidden;
+  width: 0;
+}
+
+.menu_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+}
+
+#site_main {
+  height: calc(100vh - 70px);
+}
+
+#site_footer {
+  height: 70px;
+}
 }
