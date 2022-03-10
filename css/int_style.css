@@ -126,50 +126,8 @@ h4 {
 
 #site_main .sidebar,
 #site_main .content_music {
-  height: calc(100% - 60px);
+  height: 100%;
 }
-/* #region Main_header */
-
-.main_header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-.main_header_left {
-  align-items: center;
-  column-gap: 0.5rem;
-}
-
-.main_header img {
-  width: 40px;
-}
-
-.main_header .title_logo {
-  font-size: 25px;
-}
-
-.btn_uppgrade {
-  color: var(--light);
-  text-transform: uppercase;
-  font-size: var(--font_size_small);
-  border: 1px solid var(--light);
-  padding: 5px 20px;
-  border-radius: 1rem;
-}
-
-.main_header_right {
-  margin-right: 3rem;
-}
-
-.main_header_right:hover {
-  transform: scale(1.2);
-}
-
-/* #endregion Main_header */
-
 /* #region Sidebar */
 
 .sidebar {
@@ -189,6 +147,7 @@ h4 {
 
 .logo_int_page {
   align-items: center;
+  padding-bottom: 2rem;
 }
 
 .logo_int_page span {
@@ -298,15 +257,15 @@ h4 {
 }
 
 @keyframes jump {
-  0%{
+  0% {
     transform: translate(0, 0);
   }
-  
-  50%{
+
+  50% {
     transform: translate(0, -40%);
   }
 
-  100%{
+  100% {
     transform: translate(0, 0);
   }
 }
@@ -322,7 +281,6 @@ h4 {
 .sidebar .installa {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--primary);
 }
 
 .sidebar .installa a {
@@ -370,191 +328,90 @@ h4 {
 
 /* #region Content Music */
 .content_music {
-  background-color: var(--fourth);
+  background: linear-gradient(to bottom, lightgrey, black, black);
   display: flex;
   flex-direction: column;
   width: calc(100% - 320px);
-  padding: 1rem 2rem 1rem 1rem;
   overflow-y: auto;
 }
 
-.content_music nav {
+/* #region Playlist */
+.playlist {
+  width: 100%;
+}
+
+.playlist .title_playlist {
+  background-color: grey;
   display: flex;
-  justify-content: center;
-}
-
-.content_music nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 1.5rem;
-  font-size: var(--font_size_md);
-  font-weight: 900;
-}
-
-.content_music nav ul li {
-  list-style: none;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.content_music nav ul li:hover{
-  animation: swing;
-  animation-duration: 600ms;
-}
-
-@keyframes swing {
-
-  0%{
-    transform: rotate(0deg);
-  }
-
-  25%{
-    transform: rotate(20deg);
-  }
-
-  50%{
-   transform: rotate(-20deg);
-  }
-
-  75%{
-    transform: rotate(20deg);
-  }
-
-  90%{
-   transform: rotate(-20deg);
-  }
-
-  100%{
-    
-    transform: rotate(0deg);
-  }
-  
-}
-
-.content_music nav ul li a {
-  color: var(--primary);
-}
-
-.content_music nav ul li a:hover {
-  color: var(--light);
-}
-
-.content_music nav .green_bar {
-  width: 40%;
-  height: 2px;
-  background-color: var(--third);
-  display: inline-block;
-}
-
-.content_music .recently_played,
-.content_music .john_doe,
-.content_music .artisti_popolari {
-  display: flex;
-  column-gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.content_music .recently_played i,
-.content_music .john_doe i,
-.content_music .artisti_popolari i {
-  visibility: hidden;
-  font-size: 4rem;
-  position: absolute;
-  top: 23%;
-}
-
-.img_played:hover,
-.img_john_doe:hover,
-.img_artisti_popolari:hover{
-  animation: color;
-  animation-duration: 1s;
-}
-
-@keyframes color {
-  0%{
-    color:var(--light)
-  }
-
-  50%{
-    color: var(--third);
-    transform: scale(1.1);
-  }
-
-  100%{
-    color: var(--third);
-  }
-}
-
-.img_played:hover i,
-.img_john_doe:hover i,
-.img_artisti_popolari:hover i {
-  visibility: visible;
-  z-index: 1;
-}
-
-.img_played:hover img,
-.img_john_doe:hover img,
-.img_artisti_popolari:hover img {
-  filter: brightness(0.5);
-}
-
-.content_music .img_played,
-.content_music .img_john_doe,
-.content_music .img_artisti_popolari {
-  width: calc(100% / 6 - 1rem);
-  text-align: center;
-  position: relative;
-  display: flex;
+  align-items: flex-start;
+  width: 100%;
   flex-direction: column;
+}
+
+.playlist .img_playlist {
+  display: flex;
+  align-items: flex-end;
+}
+
+.playlist .img_playlist img {
+  max-width: 25%;
+  box-shadow: 0px 0px 20px 7px #040404ab;
+  margin: 1rem;
+  aspect-ratio: 1 / 1;
+}
+
+.playlist .title {
+  margin: 1rem 2rem;
+}
+
+.playlist .title h1 {
+  font-size: 3rem;
+}
+
+.playlist .title div {
+  font-size: var(--font_size_small);
+}
+
+.playlist .action_title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+}
+
+.playlist .action_title .left i {
+  padding-right: 0.5rem;
+  filter: invert(1);
+  font-size: 20px;
+}
+
+.playlist .action_title .dx {
+  opacity: 0.4;
+}
+
+.playlist .right {
+  display: flex;
+}
+
+.btn_uppgrade {
+  display: flex;
   align-items: center;
-}
-
-.content_music .img_played img,
-.content_music .img_john_doe img,
-.content_music .img_artisti_popolari img {
-  max-width: 100%;
-}
-
-.content_music .img_played .subtitle,
-.content_music .img_john_doe .subtitle,
-.content_music .img_artisti_popolari .subtitle {
-  margin-top: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.658);
+  color: var(--light);
   font-size: var(--font_size_small);
-  font-weight: bold;
+  padding: 5px 20px;
+  border-radius: 1rem;
+  margin-right: 1rem;
 }
 
-.content_music .subtitle_john_doe,
-.content_music .subtitle_artisti_popolari {
-  font-size: var(--font_size_small);
-  font-weight: bold;
+.btn_uppgrade span i{
+    font-size: 15px;
+     padding-left: 5px;
 }
 
-.content_music .img_artisti_popolari img {
-  border-radius: 50%;
-}
+/* #endregion Playlist */
 
 /* #endregion Content Music */
-
-/* #region Debug Main */
-.debug #site_main {
-  background-color: orange;
-}
-
-.debug .main_header {
-  background-color: rgba(0, 0, 255, 0.507);
-}
-
-.debug .sidebar {
-  width: 20%;
-  background-color: rgba(238, 130, 238, 0.603);
-}
-
-.debug .content_music {
-  width: 80%;
-  background-color: rgba(2, 173, 2, 0.63);
-}
-/* #endregion Debug Main */
 
 /* #endregion Main*/
 
@@ -571,46 +428,6 @@ h4 {
   display: flex;
   align-items: center;
   width: 30%;
-}
-
-.menu_left img {
-  width: 42px;
-  margin: 0 10px;
-}
-
-.menu_left .text_music {
-  margin-left: 1rem;
-}
-
-.menu_left .title_music {
-  font-size: var(--font_size_lg);
-  font-weight: bold;
-}
-
-.menu_left .subtitle_music {
-  font-size: var(--font_size_small);
-  font-weight: bold;
-  color: var(--primary);
-}
-
-.menu_left .subtitle_music:hover {
-  color: var(--light);
-  text-decoration: underline;
-}
-
-.menu_left .icon_footer {
-  margin-left: 2.5rem;
-}
-
-.menu_left .icon_footer i {
-  font-size: var(--font_size_lg);
-  color: var(--primary);
-  padding: 0.2rem;
-  cursor: pointer;
-}
-
-.menu_left .icon_footer i:hover {
-  color: var(--light);
 }
 
 /* #endregion menu_left */
@@ -746,32 +563,6 @@ h4 {
 
 /* #endregion menu_right */
 
-/* #region Debug Footer */
-.debug #site_footer {
-  background-color: red;
-  width: 100%;
-}
-
-.debug .menu_left {
-  width: 30%;
-  height: 100%;
-  background-color: rgba(255, 255, 0, 0.438);
-}
-
-.debug .menu_center {
-  width: 40%;
-  height: 100%;
-  background-color: rgba(137, 43, 226, 0.507);
-}
-
-.debug .menu_right {
-  width: 30%;
-  height: 100%;
-  background-color: rgba(245, 245, 220, 0.596);
-}
-
-/* #endregion Debug Footer */
-
 /* #endregion Footer */
 
 @media screen and (max-width: 1440px) {
@@ -808,11 +599,11 @@ h4 {
 
   .sidebar .nome_playlist {
     max-height: 150px;
-}
+  }
 
   .sidebar .nome_playlist li {
     margin-top: 0.5rem;
-}
+  }
 
   .content_music {
     width: calc(100% - 200px);
@@ -845,13 +636,13 @@ h4 {
     transition: all 1s;
   }
 
-    .sidebar .nome_playlist {
+  .sidebar .nome_playlist {
     max-height: 150px;
-}
+  }
 
   .sidebar .nome_playlist li {
     margin-top: 0.5rem;
-}
+  }
 
   .content_music {
     width: calc(100% - 200px);
@@ -903,13 +694,13 @@ h4 {
     overflow: hidden;
   }
 
-    .sidebar .nome_playlist {
+  .sidebar .nome_playlist {
     max-height: 150px;
-}
+  }
 
   .sidebar .nome_playlist li {
     margin-top: 0.5rem;
-}
+  }
 
   .vertical_line_green {
     top: 4px;
@@ -966,7 +757,7 @@ h4 {
     display: none;
   }
 
-   .content_music .screen_1024,
+  .content_music .screen_1024,
   .content_music .screen_768,
   .content_music .screen_568 {
     margin-top: 2rem;
@@ -1017,13 +808,13 @@ h4 {
     overflow: hidden;
   }
 
-    .sidebar .nome_playlist {
+  .sidebar .nome_playlist {
     max-height: 150px;
-}
+  }
 
   .sidebar .nome_playlist li {
     margin-top: 0.5rem;
-}
+  }
 
   .sidebar .profile {
     display: inline-block;

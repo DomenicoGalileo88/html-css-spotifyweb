@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>spotifyweb</title>
+    <title>spotifyweb_int</title>
 
     <link
       rel="stylesheet"
@@ -21,7 +21,6 @@
     />
     <link rel="stylesheet" href="./css/basic_structure.css" />
     <link rel="stylesheet" href="./css/int_style.css">
-    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <main id="site_main">
@@ -118,132 +117,49 @@
           </div>
           <!-- /.installa -->
 
-          <div class="profile">
-            <div class="icon_john_doe">
-              <img src="./img/profile.svg" alt="icon_john_doe" />
-            </div>
-            <span class="screen_text_320">John Doe</span>
-          </div>
-          <!-- /.profile -->
         </div>
       </aside>
       <!-- /.sidebar -->
 
       <div class="content_music">
-        <nav id="main_navbar">
-          <ul>
-            <li>
-              <a href="#"> in evidenza </a>
-              <div class="green_bar"></div>
-            </li>
-            <li>
-              <a href="#"> podcast </a>
-            </li>
-            <li>
-              <a href="#"> classifiche </a>
-            </li>
-            <li>
-              <a href="#"> generi e mood </a>
-            </li>
-            <li>
-              <a href="#"> nuove uscite </a>
-            </li>
-            <li>
-              <a href="#"> scopri </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- /#main_navbar -->
-
-        <h2 class="mb_2 mt_3">Recently played</h2>
-
-        <div class="container_lg recently_played">
-          <div class="img_played">
-            <i class="fa-regular fa-circle-play"></i>
-            <img src="./img/metal_lifting.jpg" alt="metal_lifting" />
-            <h4 class="mt_1">Heavry Metal</h4>
-            <div class="subtitle primary">Subtitle</div>
+          <div class="playlist">
+            <div class="title_playlist">
+                <div class="action_title">
+                    <div class="left">
+                        <i class="fa-solid fa-circle-chevron-left"></i>
+                        <i class="fa-solid fa-circle-chevron-right dx"></i>
+                    </div>
+                    <div class="right">
+                        <div class="btn_uppgrade">
+                            Upgrade
+                        </div>
+                        <div class="btn_uppgrade">
+                            dom_gal_88 <span><i class="fa-solid fa-sort-down"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="img_playlist">
+                    <img src="./img/metal_lifting.jpg" alt="metal">
+                    <div class="title">
+                    <div>
+                        PLAYLIST
+                    </div>
+                    <h1>
+                        My Playlist #3
+                    </h1>
+                    <div>
+                        dom_gal_88 - 9 song 
+                        <span>
+                            34 min 45 sec
+                        </span>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="upgrade"></div>
+            </div>
+            <div class="content_playlist"></div>
           </div>
-
-          <div class="img_played">
-            <i class="fa-regular fa-circle-play"></i>
-            <img src="./img/stranger.jpeg" alt="stranger" />
-            <h4 class="mt_1">
-              Streanger Things, Vol 1(a Netflix Original Series Soundtrack)
-            </h4>
-            <div class="subtitle primary">Subtitle</div>
-          </div>
-
-          <div class="img_played screen_568">
-            <i class="fa-regular fa-circle-play"></i>
-            <img src="./img/aquietplace.jpeg" alt="a_quiet_place" />
-            <h4 class="mt_1">A quiet place</h4>
-            <div class="subtitle primary">Subtitle</div>
-          </div>
-
-          <div class="img_played screen_768">
-            <i class="fa-regular fa-circle-play"></i>
-            <img src="./img/split.jpeg" alt="split" />
-            <h4 class="mt_1">Split</h4>
-            <div class="subtitle primary">Subtitle</div>
-          </div>
-
-          <div class="img_played screen_1024">
-            <i class="fa-regular fa-circle-play"></i>
-            <img src="./img/cure.jpeg" alt="a_cure_for_wellness" />
-            <h4 class="mt_1">A cure for wellness</h4>
-            <div class="subtitle primary">Subtitle</div>
-          </div>
-
-          <div class="img_played screen_1024">
-            <i class="fa-regular fa-circle-play"></i>
-            <img src="./img/sinister.jpeg" alt="sinister" />
-            <h4 class="mt_1">Sinister</h4>
-            <div class="subtitle primary">Subtitle</div>
-          </div>
-        </div>
-        <!-- /.recently_played -->
-
-        <h2 class="mb_1 mt_3">Creato per John Doe</h2>
-        <div class="subtitle_john_doe primary mb_2">
-          Più ascolti, più accurati saranno i suggerimenti
-        </div>
-
-        <div class="container_lg john_doe">
-          <div class="img_john_doe">
-            <i class="fa-regular fa-circle-play"></i>
-            <img src="./img/radar.jpeg" alt="release_radar" />
-            <h4 class="mt_1">Release Radar</h4>
-          </div>
-
-          <div class="img_john_doe">
-            <i class="fa-regular fa-circle-play"></i>
-            <img src="./img/mixdaily.jpeg" alt="daily_mix_1" />
-            <h4 class="mt_1">Daily Mix 1</h4>
-          </div>
-        </div>
-        <!-- /.john_doe -->
-
-        <h2 class="mb_1 mt_3">Artisti più popolari</h2>
-        <div class="subtitle_artisti_popolari primary mb_2">
-          Più ascolti, più accurati saranno i suggerimenti
-        </div>
-
-        <div class="container_lg artisti_popolari">
-          <div class="img_artisti_popolari">
-            <i class="fa-regular fa-circle-play"></i>
-            <img src="./img/youg.jpeg" alt="young" />
-            <h4 class="mt_1">Lana del Rey</h4>
-          </div>
-
-          <div class="img_artisti_popolari">
-            <i class="fa-regular fa-circle-play"></i>
-
-            <img src="./img/einaudi.jpeg" alt="ludovico_enaudi" />
-            <h4 class="mt_1">Ludovico Einaudi</h4>
-          </div>
-        </div>
-        <!-- /.artisti_popolari -->
       </div>
       <!-- /.content_music -->
     </main>
@@ -251,16 +167,6 @@
 
     <footer id="site_footer">
       <div class="menu_left screen_display_320">
-        <img src="./img/sinister.jpeg" alt="sinister" />
-        <div class="text_music">
-          <div class="title_music">Sinister</div>
-          <div class="subtitle_music">Brano Nome</div>
-        </div>
-
-        <div class="icon_footer">
-          <i class="far fa-heart"></i>
-          <i class="far fa-folder"></i>
-        </div>
       </div>
       <!-- /.menu_left -->
       <div class="menu_center">
