@@ -288,6 +288,26 @@ h4 {
   margin-top: 1rem;
 }
 
+.sidebar .nome_playlist li:active {
+  animation-name: jump;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+@keyframes jump {
+  0%{
+    transform: translate(0, 0);
+  }
+  
+  50%{
+    transform: translate(0, -40%);
+  }
+
+  100%{
+    transform: translate(0, 0);
+  }
+}
+
 .sidebar .nome_playlist a {
   color: var(--primary);
 }
@@ -375,6 +395,40 @@ h4 {
   text-align: center;
 }
 
+.content_music nav ul li:hover{
+  animation: swing;
+  animation-duration: 600ms;
+}
+
+@keyframes swing {
+
+  0%{
+    transform: rotate(0deg);
+  }
+
+  25%{
+    transform: rotate(20deg);
+  }
+
+  50%{
+   transform: rotate(-20deg);
+  }
+
+  75%{
+    transform: rotate(20deg);
+  }
+
+  90%{
+   transform: rotate(-20deg);
+  }
+
+  100%{
+    
+    transform: rotate(0deg);
+  }
+  
+}
+
 .content_music nav ul li a {
   color: var(--primary);
 }
@@ -405,6 +459,28 @@ h4 {
   font-size: 4rem;
   position: absolute;
   top: 23%;
+}
+
+.img_played:hover,
+.img_john_doe:hover,
+.img_artisti_popolari:hover{
+  animation: color;
+  animation-duration: 1s;
+}
+
+@keyframes color {
+  0%{
+    color:var(--light)
+  }
+
+  50%{
+    color: var(--third);
+    transform: scale(1.1);
+  }
+
+  100%{
+    color: var(--third);
+  }
 }
 
 .img_played:hover i,
