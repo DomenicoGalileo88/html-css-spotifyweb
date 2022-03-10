@@ -35,7 +35,7 @@ a {
   text-decoration: none;
 }
 
-h4{
+h4 {
   font-size: var(--font_size_h4);
 }
 
@@ -53,18 +53,18 @@ h4{
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background: var(--primary); 
 }
- 
+  */
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--secondary); 
+  background: var(--primary);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background:var(--light); 
+  background: var(--light);
 }
 
 /* #endregion Common */
@@ -173,6 +173,7 @@ h4{
 /* #region Sidebar */
 
 .sidebar {
+  position: relative;
   width: 320px;
   padding: 1rem;
   overflow-y: auto;
@@ -181,22 +182,33 @@ h4{
   justify-content: space-between;
 }
 
+.vertical_line_green {
+  width: 2px;
+  height: 25px;
+  background-color: var(--third);
+  position: absolute;
+  top: 16px;
+  left: 0;
+  transition: all 1s;
+}
+
 .sidebar a {
   display: flex;
   margin-bottom: 0.5rem;
 }
 
-.display_visible{
-    visibility: hidden;
-    position: absolute;
+.display_visible {
+  align-items: center;
+  visibility: hidden;
+  position: absolute;
 }
 
-.display_visible span{
+.display_visible span {
   font-size: 25px;
   padding-left: 0.5rem;
 }
 
-.display_visible img{
+.display_visible img {
   width: 40px;
 }
 
@@ -306,13 +318,13 @@ h4{
   font-weight: 900;
 }
 
-.sidebar .profile{
+.sidebar .profile {
   display: flex;
   align-items: center;
   margin-top: 1rem;
 }
 
-.sidebar .icon_john_doe{
+.sidebar .icon_john_doe {
   width: 30px;
   height: 30px;
   background-color: var(--primary);
@@ -323,12 +335,12 @@ h4{
   align-items: center;
 }
 
-.sidebar .icon_john_doe img{
+.sidebar .icon_john_doe img {
   max-width: 60%;
 }
 
-.sidebar .profile span{
-  font-size: var(--font_size_md)
+.sidebar .profile span {
+  font-size: var(--font_size_md);
   padding-left: 1rem;
 }
 /* #endregion Sidebar */
@@ -546,7 +558,7 @@ h4{
   transition: 100ms;
 }
 
-.menu_center .icon_footer .large:hover{
+.menu_center .icon_footer .large:hover {
   transform: scale(1.1);
 }
 
@@ -570,7 +582,7 @@ h4{
   background-color: var(--secondary);
 }
 
-.menu_center .time_bar .time_left:hover .time_passed{
+.menu_center .time_bar .time_left:hover .time_passed {
   background-color: var(--third);
 }
 
@@ -585,7 +597,7 @@ h4{
   visibility: hidden;
 }
 
-.menu_center .time_bar .time_left:hover .time_vision{
+.menu_center .time_bar .time_left:hover .time_vision {
   visibility: visible;
 }
 
@@ -603,7 +615,7 @@ h4{
   justify-content: end;
 }
 
-.menu_right .icon_footer .small{
+.menu_right .icon_footer .small {
   font-size: 8px;
 }
 
@@ -633,7 +645,7 @@ h4{
   background-color: var(--secondary);
 }
 
-.menu_right .volume_bar .volume_left:hover .volume_passed{
+.menu_right .volume_bar .volume_left:hover .volume_passed {
   background-color: var(--third);
 }
 
@@ -648,7 +660,7 @@ h4{
   visibility: hidden;
 }
 
-.menu_right .volume_bar .volume_left:hover .volume_vision{
+.menu_right .volume_bar .volume_left:hover .volume_vision {
   visibility: visible;
 }
 
@@ -682,308 +694,333 @@ h4{
 
 /* #endregion Footer */
 
-
-@media screen and (max-width:1440px) {
-
-  :root{
-  --font_size_small: 12px;
-  --font_size_md: 14px;
-  --font_size_lg: 15px;
-  --font_size_h4: 1rem;
+@media screen and (max-width: 1440px) {
+  :root {
+    --font_size_small: 12px;
+    --font_size_md: 14px;
+    --font_size_lg: 15px;
+    --font_size_h4: 1rem;
   }
 
-  .sidebar{
+  .sidebar {
     width: 260px;
     transition: all 1s;
   }
 
-  .content_music{
-     width: calc(100% - 260px);
-     transition: all 1s;
+  .content_music {
+    width: calc(100% - 260px);
+    transition: all 1s;
   }
-  
 }
 
-@media screen and (max-width:1024px) {
-
-:root{
-  --font_size_small: 11px;
-  --font_size_md: 13px;
-  --font_size_lg: 14px;
-  --font_size_h4: 0.9rem;
+@media screen and (max-width: 1024px) {
+  :root {
+    --font_size_small: 11px;
+    --font_size_md: 13px;
+    --font_size_lg: 14px;
+    --font_size_h4: 0.9rem;
   }
 
-.sidebar{
+  .sidebar {
     width: 200px;
     transition: all 1s;
-
   }
 
-.content_music{
-     width: calc(100% - 200px);
-     transition: all 1s;
-
-  }
-  
-.content_music .img_played,
-.content_music .img_john_doe,
-.content_music .img_artisti_popolari {
-  width: calc(100% / 4 - 1rem);
-  transition: all 1s;
+  .sidebar .nome_playlist {
+    max-height: 150px;
 }
 
-.content_music .screen_1024{
-  margin-top: 2rem;
-  display: none;
-}
+  .sidebar .nome_playlist li {
+    margin-top: 0.5rem;
 }
 
-@media screen and (max-width:768px) {
-
-  :root{
-  --font_size_small: 10px;
-  --font_size_md: 12px;
-  --font_size_lg: 13px;
-  --font_size_h4: 0.8rem;
-  }
-
-  .sidebar{
-    width: 200px;
+  .content_music {
+    width: calc(100% - 200px);
     transition: all 1s;
-
   }
 
-  .content_music{
-     width: calc(100% - 200px);
-     transition: all 1s;
-
-  }
-  
   .content_music .img_played,
-.content_music .img_john_doe,
-.content_music .img_artisti_popolari {
-  width: calc(100% / 2 - 1rem);
-  transition: all 1s;
-}
-
-.content_music .screen_1024,
-.content_music .screen_768{
-  margin-top: 2rem;
-  display: none;
-}
-}
-
-@media screen and (max-width:568px) {
-
-  :root{
-  --font_size_small: 10px;
-  --font_size_md: 12px;
-  --font_size_lg: 13px;
-  --font_size_h4: 0.7rem;
+  .content_music .img_john_doe,
+  .content_music .img_artisti_popolari {
+    width: calc(100% / 4 - 1rem);
+    transition: all 1s;
   }
 
-h2{
+  .content_music .screen_1024 {
+    margin-top: 2rem;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --font_size_small: 10px;
+    --font_size_md: 12px;
+    --font_size_lg: 13px;
+    --font_size_h4: 0.8rem;
+  }
+
+  .sidebar {
+    width: 200px;
+    transition: all 1s;
+  }
+
+    .sidebar .nome_playlist {
+    max-height: 150px;
+}
+
+  .sidebar .nome_playlist li {
+    margin-top: 0.5rem;
+}
+
+  .content_music {
+    width: calc(100% - 200px);
+    transition: all 1s;
+  }
+
+  .content_music .img_played,
+  .content_music .img_john_doe,
+  .content_music .img_artisti_popolari {
+    width: calc(100% / 2 - 1rem);
+    transition: all 1s;
+  }
+
+  .content_music .screen_1024,
+  .content_music .screen_768 {
+    margin-top: 2rem;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  :root {
+    --font_size_small: 10px;
+    --font_size_md: 12px;
+    --font_size_lg: 13px;
+    --font_size_h4: 0.7rem;
+  }
+
+  h2 {
     font-size: 1.2rem;
   }
 
-.main_header{
+  .main_header {
     padding: 6px;
   }
 
-.main_header img {
+  .main_header img {
     width: 25px;
-}
+  }
 
-.main_header_right {
-  margin-right: 1rem;
-}
+  .main_header_right {
+    margin-right: 1rem;
+  }
 
-.sidebar{
+  .sidebar {
     width: 38px;
     transition: all 1s;
     padding: 0.3rem 0.3rem 0 0.3rem;
     overflow: hidden;
   }
 
-.sidebar .profile{
-  display: inline-block;
-  margin-top: 0;
+    .sidebar .nome_playlist {
+    max-height: 150px;
 }
 
-.sidebar .installa {
-  border-bottom: 0px solid var(--primary);
-  margin-bottom: 1rem;
+  .sidebar .nome_playlist li {
+    margin-top: 0.5rem;
 }
 
-.sidebar .installa img {
-  width: 25px;
-  filter: brightness(0.5);
-}
+  .vertical_line_green {
+    top: 4px;
+  }
 
-.content_music{
-  width: calc(100% - 38px);
-  transition: all 1s;
-  padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+  .sidebar .profile {
+    display: inline-block;
+    margin-top: 0;
+  }
+
+  .sidebar .installa {
+    border-bottom: 0px solid var(--primary);
+    margin-bottom: 1rem;
+  }
+
+  .sidebar .installa img {
+    width: 25px;
+    filter: brightness(0.5);
+  }
+
+  .content_music {
+    width: calc(100% - 38px);
+    transition: all 1s;
+    padding: 0.3rem 0.6rem 0.3rem 0.3rem;
   }
 
   .content_music nav ul {
-  font-size: var(--font_size_small);
-}
-
-.content_music .recently_played,
-.content_music .john_doe,
-.content_music .artisti_popolari {
-   column-gap: 0.5rem;
-}
-  
-.content_music .img_played,
-.content_music .img_john_doe,
-.content_music .img_artisti_popolari {
-  width: calc(100% / 2 - 0.5rem);
-  transition: all 1s;
-}
-
-.content_music .screen_1024,
-.content_music .screen_768{
-  margin-top: 2rem;
-}
-
-.screen_text_320{
-  visibility: hidden;
-}
-
-.screen_display_320{
-  visibility: hidden;
-  width: 0;
-}
-
-.menu_center {
-  width: 568px;
-}
-
-#site_main {
-  height: calc(100vh - 70px);
-}
-
-#site_footer {
-  height: 70px;
-}
-
-}
-
-@media screen and (max-width:320px) {
-
-  :root{
-  --font_size_small: 10px;
-  --font_size_md: 12px;
-  --font_size_lg: 13px;
-  --font_size_h4: 0.7rem;
+    font-size: var(--font_size_small);
   }
 
-h2{
+  .content_music .recently_played,
+  .content_music .john_doe,
+  .content_music .artisti_popolari {
+    column-gap: 0.5rem;
+  }
+
+  .content_music .img_played,
+  .content_music .img_john_doe,
+  .content_music .img_artisti_popolari {
+    width: calc(100% / 2 - 0.5rem);
+    transition: all 1s;
+  }
+
+  .content_music .screen_1024,
+  .content_music .screen_768 {
+    margin-top: 2rem;
+  }
+
+  .screen_text_320 {
+    visibility: hidden;
+  }
+
+  .screen_display_320 {
+    visibility: hidden;
+    width: 0;
+  }
+
+  .menu_center {
+    width: 568px;
+  }
+
+  #site_main {
+    height: calc(100vh - 70px);
+  }
+
+  #site_footer {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  :root {
+    --font_size_small: 10px;
+    --font_size_md: 12px;
+    --font_size_lg: 13px;
+    --font_size_h4: 0.7rem;
+  }
+
+  h2 {
     font-size: 1.2rem;
   }
 
-.main_header{
+  .main_header {
     padding: 6px;
   }
 
-.main_header img {
+  .main_header img {
     width: 25px;
-}
+  }
 
-.main_header_right {
-  margin-right: 1rem;
-}
+  .main_header_right {
+    margin-right: 1rem;
+  }
 
-.sidebar{
+  .sidebar {
     width: 38px;
     transition: all 1s;
     padding: 0.3rem 0.3rem 0 0.3rem;
     overflow: hidden;
   }
 
-.sidebar .profile{
-  display: inline-block;
-  margin-top: 0;
+    .sidebar .nome_playlist {
+    max-height: 150px;
 }
 
-.sidebar .installa {
-  border-bottom: 0px solid var(--primary);
-  margin-bottom: 1rem;
+  .sidebar .nome_playlist li {
+    margin-top: 0.5rem;
 }
 
-.sidebar .installa img {
-  width: 25px;
-  filter: brightness(0.5);
-}
+  .sidebar .profile {
+    display: inline-block;
+    margin-top: 0;
+  }
 
-.content_music{
-  width: calc(100% - 38px);
-  transition: all 1s;
-  padding: 0.3rem 0.6rem 0.3rem 0.3rem;
+  .sidebar .installa {
+    border-bottom: 0px solid var(--primary);
+    margin-bottom: 1rem;
+  }
+
+  .sidebar .installa img {
+    width: 25px;
+    filter: brightness(0.5);
+  }
+
+  .content_music {
+    width: calc(100% - 38px);
+    transition: all 1s;
+    padding: 0.3rem 0.6rem 0.3rem 0.3rem;
   }
 
   .content_music nav ul {
-  font-size: var(--font_size_small);
+    font-size: var(--font_size_small);
+  }
+
+  .content_music .recently_played,
+  .content_music .john_doe,
+  .content_music .artisti_popolari {
+    column-gap: 0.5rem;
+  }
+
+  .content_music .img_played,
+  .content_music .img_john_doe,
+  .content_music .img_artisti_popolari {
+    width: calc(100% / 2 - 0.5rem);
+    transition: all 1s;
+  }
+
+  .content_music .screen_1024,
+  .content_music .screen_768 {
+    margin-top: 2rem;
+  }
+
+  .screen_text_320 {
+    visibility: hidden;
+  }
+
+  .screen_display_320 {
+    visibility: hidden;
+    width: 0;
+  }
+
+  .menu_center {
+    width: 320px;
+  }
+
+  #site_main {
+    height: calc(100vh - 70px);
+  }
+
+  #site_footer {
+    height: 70px;
+  }
 }
 
-.content_music .recently_played,
-.content_music .john_doe,
-.content_music .artisti_popolari {
-   column-gap: 0.5rem;
-}
-  
-.content_music .img_played,
-.content_music .img_john_doe,
-.content_music .img_artisti_popolari {
-  width: calc(100% / 2 - 0.5rem);
-  transition: all 1s;
-}
+@media screen and (max-height: 320px) {
+  #site_main .sidebar,
+  #site_main .content_music {
+    height: 100%;
+  }
 
-.content_music .screen_1024,
-.content_music .screen_768{
-  margin-top: 2rem;
-}
-
-.screen_text_320{
-  visibility: hidden;
-}
-
-.screen_display_320{
-  visibility: hidden;
-  width: 0;
-}
-
-.menu_center {
-  width: 320px;
-}
-
-#site_main {
-  height: calc(100vh - 70px);
-}
-
-#site_footer {
-  height: 70px;
-}
-
-}
-
-@media screen and (max-height:320px) {
-
-#site_main .sidebar,
-#site_main .content_music {
-  height: 100%;
-}
-
-.main_header{
+  .main_header {
     display: none;
   }
 
-.display_visible{
-  position: relative;
-  visibility: visible;
-  padding-bottom: 1rem;
-}
+  .display_visible {
+    position: relative;
+    visibility: visible;
+    padding-bottom: 1rem;
+  }
 
+  .vertical_line_green {
+    top: 78px;
+  }
 }
