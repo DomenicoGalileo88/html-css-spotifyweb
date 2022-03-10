@@ -658,7 +658,7 @@ h4 {
   background-color: var(--secondary);
 }
 
-.menu_center .time_bar .time_left:hover .time_passed {
+.menu_center .time_bar:hover .time_passed {
   background-color: var(--third);
 }
 
@@ -673,7 +673,7 @@ h4 {
   visibility: hidden;
 }
 
-.menu_center .time_bar .time_left:hover .time_vision {
+.menu_center .time_bar:hover .time_vision {
   visibility: visible;
 }
 
@@ -691,8 +691,9 @@ h4 {
   justify-content: end;
 }
 
-.menu_right .icon_footer .small {
-  font-size: 8px;
+.menu_right .small {
+  font-size: 11px;
+  padding-right: 2px;
 }
 
 .menu_right .icon_footer i {
@@ -721,7 +722,7 @@ h4 {
   background-color: var(--secondary);
 }
 
-.menu_right .volume_bar .volume_left:hover .volume_passed {
+.menu_right .volume_bar:hover .volume_passed {
   background-color: var(--third);
 }
 
@@ -736,7 +737,7 @@ h4 {
   visibility: hidden;
 }
 
-.menu_right .volume_bar .volume_left:hover .volume_vision {
+.menu_right .volume_bar:hover .volume_vision {
   visibility: visible;
 }
 
