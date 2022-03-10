@@ -852,14 +852,14 @@ h4 {
 
   .content_music {
     width: calc(100% - 200px);
-    transition: all 1s;
+    transition: all 0.5s;
   }
 
   .content_music .img_played,
   .content_music .img_john_doe,
   .content_music .img_artisti_popolari {
-    width: calc(100% / 2 - 1rem);
-    transition: all 1s;
+    width: calc(100% / 3 - 1rem);
+    transition: all 0.5s;
   }
 
   .content_music .screen_1024,
@@ -929,7 +929,7 @@ h4 {
 
   .content_music {
     width: calc(100% - 38px);
-    transition: all 1s;
+    transition: all 0.5s;
     padding: 0.3rem 0.6rem 0.3rem 0.3rem;
   }
 
@@ -947,7 +947,7 @@ h4 {
   .content_music .img_john_doe,
   .content_music .img_artisti_popolari {
     width: calc(100% / 2 - 0.5rem);
-    transition: all 1s;
+    transition: all 0.5s;
   }
 
   .content_music .screen_1024,
@@ -960,8 +960,14 @@ h4 {
   }
 
   .screen_display_320 {
-    visibility: hidden;
-    width: 0;
+    display: none;
+  }
+
+   .content_music .screen_1024,
+  .content_music .screen_768,
+  .content_music .screen_568 {
+    margin-top: 2rem;
+    display: none;
   }
 
   .menu_center {
@@ -1033,7 +1039,7 @@ h4 {
 
   .content_music {
     width: calc(100% - 38px);
-    transition: all 1s;
+    transition: all 0.5s;
     padding: 0.3rem 0.6rem 0.3rem 0.3rem;
   }
 
@@ -1051,7 +1057,7 @@ h4 {
   .content_music .img_john_doe,
   .content_music .img_artisti_popolari {
     width: calc(100% / 2 - 0.5rem);
-    transition: all 1s;
+    transition: all 0.5s;
   }
 
   .content_music .screen_1024,
