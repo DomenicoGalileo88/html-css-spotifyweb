@@ -328,7 +328,7 @@ h4 {
 
 /* #region Content Music */
 .content_music {
-  background: linear-gradient(to bottom, lightgrey, black, black);
+  background: linear-gradient(to bottom,darkgrey,rgba(27, 27, 27, 0.993), black);
   display: flex;
   flex-direction: column;
   width: calc(100% - 320px);
